@@ -1,0 +1,28 @@
+<Window x:Class="Views.SplashWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MASA DFI - Loading" Height="300" Width="500" 
+        WindowStyle="None" WindowStartupLocation="CenterScreen" 
+        AllowsTransparency="True" Background="Transparent" Topmost="True"
+        Foreground="#00FF00" FontFamily="Consolas" Icon="../logo.ico">
+    
+    <Border Background="#050505" BorderBrush="#00FF00" BorderThickness="2" CornerRadius="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            
+            <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="MASA DFI" FontSize="48" FontWeight="Bold" Foreground="#00FF00" HorizontalAlignment="Center" />
+                <TextBlock Text="Digital Forensics Investigator" FontSize="18" Foreground="#00AA00" HorizontalAlignment="Center" Margin="0,5,0,0" />
+                <TextBlock Text="v1.0.0.0 - Administrator Mode" FontSize="12" Foreground="#005500" HorizontalAlignment="Center" Margin="0,10,0,0" />
+            </StackPanel>
+            
+            <TextBlock x:Name="txtStatus" Grid.Row="1" Text="Initializing Core Modules..." FontSize="14" Foreground="#00FF00" Margin="20,0,20,5" />
+            
+            <ProgressBar x:Name="pbLoading" Grid.Row="2" Height="5" Margin="20,0,20,20" Background="#0A0A0A" Foreground="#00FF00" BorderThickness="0" Maximum="100" />
+        </Grid>
+    </Border>
+</Window>

@@ -1,0 +1,27 @@
+<UserControl x:Class="Views.JumpListsAnalyzer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="900" Background="#000000" Foreground="#00FF00" FontFamily="Consolas">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+            <TextBlock Text="Jump Lists Analyzer" FontSize="24" FontWeight="Bold" Foreground="#00FF00" VerticalAlignment="Center" />
+            <Button x:Name="btnScan" Content="Extract Jump Lists" Margin="20,0,0,0" Padding="15,5" Cursor="Hand" Click="btnScan_Click" />
+        </StackPanel>
+
+        <DataGrid x:Name="dgJumpLists" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" HeadersVisibility="Column">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="App ID (File)" Binding="{Binding AppId}" Width="1.5*" />
+                <DataGridTextColumn Header="Extracted Paths / Data" Binding="{Binding ExtractedPath}" Width="3*" />
+                <DataGridTextColumn Header="Last Modified" Binding="{Binding LastModified}" Width="1.5*" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>
