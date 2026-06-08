@@ -71,3 +71,11 @@ dotnet run
 ## Disclaimer
 
 MASA DFI is developed strictly for lawful digital forensics, incident response, and authorized security auditing. The developers assume no liability for the misuse of this tool in unauthorized environments.
+
+## License
+
+Copyright © 2026 Mohamed Mamdouh (MASA).
+
+All rights reserved.
+
+This software and its source code are the intellectual property of Mohamed Mamdouh (MASA). No part of this project may be copied, modified, distributed, or used for commercial purposes without prior written permission from the author.
